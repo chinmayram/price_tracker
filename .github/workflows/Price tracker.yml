@@ -1,0 +1,42 @@
+name: Amazon Price Tracker
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # runs every hour (edit this to change frequency)
+  workflow_dispatch:        # allows manual trigger from GitHub UI
+
+jobs:
+  track-prices:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore price history cache
+        uses: actions/cache@v4
+        with:
+          path: price_history.json
+          key: price-history-${{ github.run_id }}
+          restore-keys: |
+            price-history-
+
+      - name: Run price tracker
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: python price_tracker.py
+
+      - name: Save price history cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: price_history.json
+          key: price-history-${{ github.run_id }}
