@@ -24,7 +24,12 @@ PRODUCTS = [
     {
         "name": "Apple Mac Mini M4",
         "url": "https://www.amazon.in/Apple-2024-Desktop-Computer-10%E2%80%91core/dp/B0DLCNVB5J/ref=sr_1_1_sspa?crid=3PSOTZ2H4JCRX&dib=eyJ2IjoiMSJ9.qy57AGeIXgokG7cmnLzTx1X5hLPOeaQa3r4g4XzfwRj4u3aDAhOoF2mnNOOYin36igze0uPnBeLoVmxbBKnkStdaupGFu4GIkxaGC0aKRXccIGY5fmK9nGlv22ba6ov7A1PMMe3ZOnpjq3f7mdCqZauWh_0JCMW0Bo9KUnB7VVhl5P94135cf4tdWTRilN3RbAuA1aXxYX7e9flQWK_1KDqD6QkqA89PPvwfMLcMB8U.GE5-UkK26limkKYUCS-jJN9-dZ5nC6rI3iXLW8d4UDU&dib_tag=se&keywords=mac+mini&qid=1772354638&sprefix=%2Caps%2C435&sr=8-1-spons&aref=TFlxRH9MvC&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
-        "target_price": 54000.00,   # alert if price drops below this
+        "target_price": 75000.00,   # alert if price drops below this
+    },
+    {
+    "name": "Product Name",
+    "url": "https://www.amazon.in/Apple-2024-Desktop-Computer-10%E2%80%91core/dp/B0DLCNVB5J/ref=sr_1_1_sspa?crid=3PSOTZ2H4JCRX&dib=eyJ2IjoiMSJ9.qy57AGeIXgokG7cmnLzTx1X5hLPOeaQa3r4g4XzfwRj4u3aDAhOoF2mnNOOYin36igze0uPnBeLoVmxbBKnkStdaupGFu4GIkxaGC0aKRXccIGY5fmK9nGlv22ba6ov7A1PMMe3ZOnpjq3f7mdCqZauWh_0JCMW0Bo9KUnB7VVhl5P94135cf4tdWTRilN3RbAuA1aXxYX7e9flQWK_1KDqD6QkqA89PPvwfMLcMB8U.GE5-UkK26limkKYUCS-jJN9-dZ5nC6rI3iXLW8d4UDU&dib_tag=se&keywords=mac+mini&qid=1772354638&sprefix=%2Caps%2C435&sr=8-1-spons&aref=TFlxRH9MvC&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
+    "target_price": 54000.00,  # alert if price drops below this
     },
     # Add more products here:
     # {
