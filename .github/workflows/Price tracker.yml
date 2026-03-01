@@ -2,7 +2,7 @@ name: Amazon Price Tracker
 
 on:
   schedule:
-    - cron: "0 * * * *"   # runs every hour (edit this to change frequency)
+    - cron: "0 * * * *"   # runs every hour
   workflow_dispatch:        # allows manual trigger from GitHub UI
 
 jobs:
@@ -32,9 +32,10 @@ jobs:
       - name: Run price tracker
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
         run: python price_tracker.py
 
-      - name: Save price history cache
+      - name: Save price history
         uses: actions/cache/save@v4
         if: always()
         with:
