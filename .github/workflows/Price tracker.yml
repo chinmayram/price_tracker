@@ -8,7 +8,7 @@ on:
 jobs:
   track-prices:
     runs-on: ubuntu-latest
-
+    if: false   # 🚫 Workflow disabled — change to true to re-enable
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
